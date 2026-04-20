@@ -5,3 +5,12 @@
   fail_on_prepare_env_warning: true
   events:
   - type: WEBHOOK
+  actions:
+  - action: ls
+    type: BUILD
+    execute_commands:
+    - pwd
+    - ls
+    shell: BASH
+    docker_image_name: buddy/localshell
+    docker_image_tag: ubuntu_24.04
